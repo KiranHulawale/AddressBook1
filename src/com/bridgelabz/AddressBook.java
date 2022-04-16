@@ -33,7 +33,7 @@ public class AddressBook {
         state = Input.getStringValue();
 
         PERSON.add(new Person(fname,lname,address,city,state,phone,zip));
-    } // END of addRecord()
+    }
 
     //	DISPLAY METHOD
     public void displayRecord()
@@ -48,7 +48,7 @@ public class AddressBook {
             }
         }
 
-    } // END OF displayRecord
+    }
 
     //	EDIT METHOD
     public void editRecord()
@@ -105,7 +105,13 @@ public class AddressBook {
             }
             System.out.println(PERSON.get(id));
         }
-    } //end of edit() method
+    }
+
+    //  SORT METHOD
+    public void sortRecords()
+    {
+        Sort.sortByName(PERSON);
+    }
 
     //	DELETE METHOD
     public void deleteRecord()
@@ -136,4 +142,5 @@ public class AddressBook {
         }
         return false;
     }
+
 }
