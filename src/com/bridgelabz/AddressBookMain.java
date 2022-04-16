@@ -2,7 +2,7 @@ package com.bridgelabz;
 
 public class AddressBookMain {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws AddressBookException {
             int choice,i=0;
             final AddressBook help = new AddressBook();
             while(i==0)
@@ -13,7 +13,8 @@ public class AddressBookMain {
                 System.out.println("3: Edit Person \n");
                 System.out.println("4: Delete Person \n");
                 System.out.println("5: Sort \n");
-                System.out.println("6: Exit	\n");
+                System.out.println("6: Search \n");
+                System.out.println("7: Exit	\n");
                 System.out.println("Enter Your Choice");
                 choice = Input.getIntValue();
                 switch(choice)
@@ -33,7 +34,10 @@ public class AddressBookMain {
                     case 5 :
                         help.sortRecords();
                         break;
-                    case 6 :
+                    case 6:
+                        help.searchInRecords();
+                        break;
+                    case 7 :
                         i=1;
                         break;
                     default :
